@@ -1,18 +1,38 @@
 package lec8;
 
-public class Student extends Person{
-	private int id=5510;
-	private double cgpa= 4;
-	public void display() {
-		System.out.println("Study");
+public class Student extends Person {
+	private int id;
+	private double cgpa;
+	
+	public void setId(int i){
+		id=i;
+		
 	}
-	public static void main(String[]args) {
-		Student obj =new Student();
-		System.out.println(obj.name);
-		System.out.println(obj.age);
-		System.out.println(obj.id);
-		System.out.println(obj.cgpa);
-		obj.display();
-	} 
+	public void setcgpa(double c) {
+		cgpa =c;
+		
+	}
+	int getId() {
+		return id;
+	}
+	double getcgpa() {
+		return cgpa;
+	}
+	public void display() {
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(getId());
+		System.out.println(getcgpa());
+		
+	}
 
+	public static void main(String []args) {
+		Student p1=new Student();
+		p1.age=22;
+		p1.name="mahin";
+		p1.setId(5580);
+		p1.setcgpa(3.556);
+		p1.display();
+		
+	}
 }
